@@ -2,8 +2,8 @@
 This module lets you experience the POWER of FUNCTIONS and PARAMETERS.
 
 Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Chengqian Lyu HERE.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import rosegraphics as rg
 
@@ -64,7 +64,7 @@ def draw_circles():
     window.close_on_mouse_click()
 
 # ----------------------------------------------------------------------
-# TODO: 2.
+# DONE: 2.
 #   First, RUN this program.  You will see that draw_circles draws
 #   concentric circles whose radii vary by 10.
 #
@@ -92,7 +92,23 @@ def draw_circles():
 #   test_draw_circles  may get you started more quickly on your new
 #   better_draw_circles  and  test_better_draw_circles.
 # ----------------------------------------------------------------------
+def test_better_draw_circles():
+    print()
+    print('--------------------------------------------------')
+    print('Testing  test_better_draw_circles:  See graphics window')
+    print('--------------------------------------------------')
+    better_draw_circles()
 
+def better_draw_circles():
+    window = rg.RoseWindow(600,600)
+
+    center = rg.Point(300,300)
+    for k in range(31):
+        circle = rg.Circle(center,2*k*k)
+        circle.attach_to(window)
+        window.render(0.1)
+
+    window.close_on_mouse_click()
 
 # ----------------------------------------------------------------------
 # TODO: 3.
@@ -122,7 +138,25 @@ def draw_circles():
 #   In testing your even_better_draw_circles function,
 #   can you make some fun pictures?
 # ----------------------------------------------------------------------
+def test_even_better_draw_circles():
+    print()
+    print('--------------------------------------------------')
+    print('Testing  test_even_better_draw_circles:  See graphics window')
+    print('--------------------------------------------------')
+    better_draw_circles()
 
+def even_better_draw_circles():
+    window = rg.RoseWindow(1000,1000)
+
+    center = rg.Point(500,500)
+    for k in range(31):
+        circle = rg.Circle(center,2*k*k)
+        circle.attach_to(window)
+        window.render(0.1)
+    circle.outline_color('green')
+    circle.outline_thickness('3')
+
+    window.close_on_mouse_click()
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
 # ----------------------------------------------------------------------
