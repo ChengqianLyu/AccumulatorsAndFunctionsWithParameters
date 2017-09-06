@@ -12,8 +12,8 @@ def main():
     """ Calls the   TEST   functions in this module. """
     test_draw_circles()
     # Un-comment the next lines when you are ready to use them.
-    # test_better_draw_circles()
-    # test_even_better_draw_circles()
+    test_better_draw_circles()
+    test_even_better_draw_circles()
 
 
 # ----------------------------------------------------------------------
@@ -97,21 +97,21 @@ def test_better_draw_circles():
     print('--------------------------------------------------')
     print('Testing  test_better_draw_circles:  See graphics window')
     print('--------------------------------------------------')
-    better_draw_circles()
+    better_draw_circles(5,4)
 
-def better_draw_circles():
+def better_draw_circles(m,h):
     window = rg.RoseWindow(600,600)
 
     center = rg.Point(300,300)
-    for k in range(31):
-        circle = rg.Circle(center,2*k*k)
+    for k in range(m+1):
+        circle = rg.Circle(center,h*k)
         circle.attach_to(window)
-        window.render(0.1)
+        window.render(0.05)
 
     window.close_on_mouse_click()
 
 # ----------------------------------------------------------------------
-# TODO: 3.
+# DONE: 3.
 #   In the previous exercise, you made a MORE POWERFUL version
 #   of draw_circles by introducing a PARAMETER for the amount by
 #   which the radii of the concentric circles increase.
@@ -143,18 +143,18 @@ def test_even_better_draw_circles():
     print('--------------------------------------------------')
     print('Testing  test_even_better_draw_circles:  See graphics window')
     print('--------------------------------------------------')
-    better_draw_circles()
+    even_better_draw_circles(20,5,0.05,'yellow',0.5)
 
-def even_better_draw_circles():
+def even_better_draw_circles(n,c,d,f,g):
     window = rg.RoseWindow(1000,1000)
 
     center = rg.Point(500,500)
-    for k in range(31):
-        circle = rg.Circle(center,2*k*k)
-        circle.outline_color('green')
-        circle.outline_thickness('3')
+    for k in range(n+1):
+        circle = rg.Circle(center,c*k)
+        circle.outline_color=f
+        circle.outline_thickness=g
         circle.attach_to(window)
-        window.render(0.1)
+        window.render(d)
 
 
     window.close_on_mouse_click()
