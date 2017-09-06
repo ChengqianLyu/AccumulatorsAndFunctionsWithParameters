@@ -151,10 +151,11 @@ def even_better_draw_circles():
     center = rg.Point(500,500)
     for k in range(31):
         circle = rg.Circle(center,2*k*k)
+        circle.outline_color('green')
+        circle.outline_thickness('3')
         circle.attach_to(window)
         window.render(0.1)
-    circle.outline_color('green')
-    circle.outline_thickness('3')
+
 
     window.close_on_mouse_click()
 # ----------------------------------------------------------------------
