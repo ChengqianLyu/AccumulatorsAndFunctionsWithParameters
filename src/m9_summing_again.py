@@ -94,8 +94,8 @@ def sum_powers_in_range(m, n, p):
     #   test cases; that would defeat the purpose of TESTING!
     # ------------------------------------------------------------------
     i=0
-    for m in range(n+1):
-        i=i+(m**p)
+    for k in range(n-m+1):
+        i=i+((m+k)**p)
     return i
 
 
