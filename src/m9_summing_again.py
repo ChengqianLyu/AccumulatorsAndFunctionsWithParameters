@@ -71,7 +71,8 @@ def test_sum_powers_in_range():
     print('Testing the   sum_powers_in_range   function:')
     print('--------------------------------------------------')
     print(sum_powers_in_range(3, 100, 0.1))
-
+    print(sum_powers_in_range(4, 50, 0.5))
+    print(sum_powers_in_range(5, 80, 1))
 
 
 def sum_powers_in_range(m, n, p):
